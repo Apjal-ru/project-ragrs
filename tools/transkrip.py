@@ -59,7 +59,7 @@ def transkrip_audio(upload_file=None):
             "--language", "id",
             "--output-txt", "",
             "--output-file", txt_path,
-            "-ng", "-nt"
+            "-nt"
         ]
 
         print(f"[INFO] Menjalankan Whisper: {' '.join(whisper_cmd)}")
