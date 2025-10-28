@@ -1,0 +1,12 @@
+Berikut adalah ringkasan percakapan dalam format SOAP:
+
+Keluhan utama: Sakit pusing
+Riwayat penyakit: Mual-mual, kekeringan (3 hari sebelumnya)
+Sosial Budaya: -
+Tekanan Darah: 140/90
+Nadi: 72
+Suhu: 37.5
+Frekuensi Nafas: 18
+Berat Badan: 70
+Asesmen: Sakit pusing, mual-mual, kekeringan; perlu pengecekan lebih lanjut.
+Plan: -

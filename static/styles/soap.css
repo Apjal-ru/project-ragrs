@@ -1,0 +1,130 @@
+/* === Tombol Floating === */
+.floating-buttons {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.floating-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 18px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.floating-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* === Modal Popup === */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal h3 {
+    margin-top: 0;
+}
+
+.modal button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    float: right;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #c82333;
+}
+
+/* status indicator styles */
+.status-indicator {
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    background: #f8f9fa;
+    color: #222;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    font-weight: 600;
+    z-index: 10001;
+}
+
+.status-indicator.recording {
+    background: #dc3545;
+    color: #fff;
+}
+
+.status-indicator.sending {
+    background: #ffc107;
+    color: #000;
+}
+
+.status-indicator.transkrip {
+    background: #17a2b8;
+    color: #fff;
+}
+
+.status-indicator.ringkas {
+    background: #6f42c1;
+    color: #fff;
+}
+
+.status-indicator.parse {
+    background: #fd7e14;
+    color: #fff;
+}
+
+.status-indicator.done {
+    background: #28a745;
+    color: #fff;
+}
+
+.status-indicator.idle {
+    background: #f8f9fa;
+    color: #222;
+}

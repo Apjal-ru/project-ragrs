@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Otomatisasi Pengisian</title>
+	<link rel="stylesheet" href="/static/styles/soap.css">
+</head>
+
+<body>
+	<div id="dialog-soap" align="left" title="Tambah SOAP" style="font-size:12px;">
+		<li class="li-row">
+			<span class="span-right">Tanggal</span>
+			<span>:</span>
+			<span>
+				<input type="text" id="tgl-soap" name="tgl-soap" size="12" style="text-align:center;" />
+			</span>
+		</li>
+		<div style="float:left;">
+			<fieldset>
+				<legend align="center" style="font-weight:bold;">Subject</legend>
+				<textarea name="soap-s" id="soap-s" cols="50" rows="3" style="display:none;"></textarea>
+				<!-- <input type="checkbox" name="isEdit" id="isEdit"><label for="o-isEdit" style="padding-left: 5px;"><b>Centang Jika Akan di Edit</b></label> -->
+				<form id="form-subject">
+					<div id="s-sub" style="margin-top:5px;">
+						<div style="margin-top:5px;">Keluhan Utama :</div>
+						<div><textarea name="s-ku" id="s-ku" cols="50" rows="1"></textarea></div>
+
+						<div style="margin-top:5px;">Riwayat Penyakit Sekarang :</div>
+						<div><textarea name="s-rps" id="s-rps" cols="50" rows="1"></textarea></div>
+
+						<div>
+							<div style="margin-top:5px;">Sosial Budaya / Kultural :</div>
+							<div><textarea name="kultur" id="kultur" cols="50" rows="1"></textarea></div>
+							<fieldset>
+								<legend>Anamnesa Psikologi/Sosial/Ekonomi</legend>
+								<table>
+									<tr>
+										<td>Kondisi Kejiwaan</td>
+										<td>:</td>
+										<td><input type="radio" name="jiwa" value="Tenang" id="jw-tenang" /><label
+												for="jw-tenang">Tenang</label></td>
+									</tr>
+									<tr>
+										<td colspan="2">&nbsp;</td>
+										<td><input type="radio" name="jiwa" value="Gelisah/Takut"
+												id="jw-gelisa" /><label for="jw-gelisa">Gelisah/Takut</label></td>
+									</tr>
+									<tr>
+										<td colspan="2">&nbsp;</td>
+										<td><input type="radio" name="jiwa" value="Bingung/stres"
+												id="jw-bingung" /><label for="jw-bingung">Bingung/stres</label></td>
+									</tr>
+									<tr>
+										<td colspan="2">&nbsp;</td>
+										<td>
+											<input type="radio" name="jiwa" value="lainnya" id="jw-lain" />
+											<input type="text" name="input_jiwa" placeholder="..." id="input_jiwa"
+												style="visibility:hidden;" />
+										</td>
+									</tr>
+								</table>
+							</fieldset>
+						</div>
+						<!--<div style="margin-top:5px;">RPD :</div>
+					<div><textarea name="s-rpd" id="s-rpd" cols="50" rows="1"></textarea></div>-->
+
+						<div style="margin-top:10px;">
+							<div style="position:absolute; padding-left:11px; margin-top:-3px;">
+								<input type="button" id="btn-tambah-rpd" value="Tambah RPD" />
+							</div>
+							<fieldset style="display:inline-block; padding-top:10px;">
+								<legend align="center" style="font-weight:bold;">Riwayat Penyakit Dahulu</legend>
+								<div id="grid-rpd"
+									style="width:400px; height:130px; background-color:white; overflow:hidden;">
+									<div id="grid-rpd-loading" class="GridLoading">
+										<!-- <img src="../icon/loading2.gif" /></div> -->
+									</div>
+							</fieldset>
+						</div>
+					</div>
+					<div style="margin-top:10px;">
+						<div style="position:absolute; padding-left:11px; margin-top:-3px;">
+							<input type="button" id="btn-tambah-alergi" value="Tambah Alergi" />
+						</div>
+						<fieldset style="display:inline-block; padding-top:10px;">
+							<legend align="center" style="font-weight:bold;">Data Alergi</legend>
+							<div id="grid-alergi"
+								style="width:400px; height:130px; background-color:white; overflow:hidden;">
+								<div id="grid-alergi-loading" class="GridLoading">
+									<!-- <img src="../icon/loading2.gif" /></div> -->
+								</div>
+						</fieldset>
+					</div>
+				</form>
+			</fieldset>
+		</div>
+		<div style="float:left; padding:5px;">&nbsp;</div>
+		<div style="float:left;">
+			<fieldset>
+				<legend align="center" style="font-weight:bold;">Object</legend>
+				<textarea name="soap-o" id="soap-o" cols="50" rows="3" style="display:none;"></textarea>
+				<form id="form-object">
+					<div id="o-sub" style="margin-top:5px;">
+						<fieldset>
+							<legend style="font-weight:bold;">Vital Sign</legend>
+							<table cellpadding="2">
+								<tr>
+									<td width="145">Tekanan Darah </td>
+									<td width="10">:</td>
+									<td width="150">
+										<input type="text" id="o-tekanan" name="o-tekanan" style="width:85px;" /> mmHg
+									</td>
+								</tr>
+								<tr>
+									<td>Nadi </td>
+									<td>:</td>
+									<td>
+										<input type="text" id="o-nadi" name="o-nadi" style="width:85px;" /> x / menit
+									</td>
+								</tr>
+								<tr>
+									<td>Suhu </td>
+									<td>:</td>
+									<td>
+										<input type="text" id="o-suhu" name="o-suhu" style="width:85px;" /> C
+									</td>
+								</tr>
+								<tr>
+									<td>Frekuensi Pernafasan </td>
+									<td>:</td>
+									<td>
+										<input type="text" id="o-nafas" name="o-nafas" style="width:85px;" /> x / menit
+									</td>
+								</tr>
+								<tr>
+									<td>Skala Nyeri</td>
+									<td>:</td>
+									<td>
+										<select name="skala" id="skala">
+											<!-- <?php
+										for($s = 0; $s <= 10; $s++) {
+											echo '<option value="'.$s.'">'.$s.'</option>';
+										}
+									?> -->
+										</select>
+										<!--
+									<input type="radio" name="skala" value="Tidak" id="sk-tdk" /><label for="sk-tdk">Tidak</label>
+									<input type="radio" name="skala" value="Iya" id="sk-ya" /><label for="sk-ya">Iya</label>
+									-->
+									</td>
+								</tr>
+								<tr>
+									<td>Berat Badan </td>
+									<td>:</td>
+									<td>
+										<input type="text" id="o-bb" name="o-bb" style="width:85px;" /> Kg
+									</td>
+								</tr>
+								<tr id="tr-tb" style="display:none;">
+									<td>Tinggi Badan </td>
+									<td>:</td>
+									<td>
+										<input type="text" id="o-tb" name="o-tb" style="width:85px;" /> Cm
+									</td>
+								</tr>
+							</table>
+						</fieldset>
+						<div style=" margin-top:5px; ">Pemeriksaan Fisik :</div>
+						<div>
+							<table style="border-collapse: collapse;" border="1" cellpadding="4" cellspacing="2">
+								<tr>
+									<td width="95" style="background-color: #A8F0EF; ">Kepala</td>
+									<td width="95"><input type="radio" name="kepala" value="Normal"
+											id="kepala-n" /><label for="kepala-n">Normal</label></td>
+									<td width="95"><input type="radio" name="kepala" value="Abnormal"
+											id="kepala-a" /><label for="kepala-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_kepala" id="input_kepala" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Mata</td>
+									<td><input type="radio" name="mata" value="Normal" id="mata-n" /><label
+											for="mata-n">Normal</label></td>
+									<td><input type="radio" name="mata" value="Abnormal" id="mata-a" /><label
+											for="mata-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_mata" id="input_mata" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">THT</td>
+									<td><input type="radio" name="tht" value="Normal" id="tht-n" /><label
+											for="tht-n">Normal</label></td>
+									<td><input type="radio" name="tht" value="Abnormal" id="tht-a" /><label
+											for="tht-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_tht" id="input_tht" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Leher</td>
+									<td><input type="radio" name="leher" value="Normal" id="leher-n" /><label
+											for="leher-n">Normal</label></td>
+									<td><input type="radio" name="leher" value="Abnormal" id="leher-a" /><label
+											for="leher-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_leher" id="input_leher" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Paru</td>
+									<td><input type="radio" name="paru" value="Normal" id="paru-n" /><label
+											for="paru-n">Normal</label></td>
+									<td><input type="radio" name="paru" value="Abnormal" id="paru-a" /><label
+											for="paru-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_paru" id="input_paru" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Jantung</td>
+									<td><input type="radio" name="jantung" value="Normal" id="jantung-n" /><label
+											for="jantung-n">Normal</label></td>
+									<td><input type="radio" name="jantung" value="Abnormal" id="jantung-a" /><label
+											for="jantung-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_jantung" id="input_jantung" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Abdomen</td>
+									<td><input type="radio" name="abdomen" value="Normal" id="abdomen-n" /><label
+											for="abdomen-n">Normal</label></td>
+									<td><input type="radio" name="abdomen" value="Abnormal" id="abdomen-a" /><label
+											for="abdomen-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_abdomen" id="input_abdomen" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Ekstermitas</td>
+									<td><input type="radio" name="ekstermitas" value="Normal"
+											id="ekstermitas-n" /><label for="ekstermitas-n">Normal</label></td>
+									<td><input type="radio" name="ekstermitas" value="Abnormal"
+											id="ekstermitas-a" /><label for="ekstermitas-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_ekstermitas" id="input_ekstermitas"
+											placeholder="..." style="visibility:hidden;" />
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #A8F0EF; ">Uro-genital</td>
+									<td><input type="radio" name="uro" value="Normal" id="uro-n" /><label
+											for="uro-n">Normal</label></td>
+									<td><input type="radio" name="uro" value="Abnormal" id="uro-a" /><label
+											for="uro-a">Abnormal</label></td>
+									<td>
+										<input type="text" name="input_uro" id="input_uro" placeholder="..."
+											style="visibility:hidden;" />
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div style="margin-top:5px;">Status Lokalis :</div>
+						<div><textarea name="o-lokalis" id="o-lokalis" cols="50" rows="1"></textarea></div>
+						<div style="margin-top:5px;">Pemeriksaan Penunjang :</div>
+						<div><textarea name="o-penunjang" id="o-penunjang" cols="50" rows="1"></textarea></div>
+					</div>
+				</form>
+			</fieldset>
+		</div>
+		<div style="clear:both;">&nbsp;</div>
+		<div style="float:left;">
+			<div style="position:absolute; padding-left:11px; margin-top:-3px;">
+				<input type="text" id="input-diagnosa" placeholder="Input Diagnosa" />
+				<input type="hidden" id="soap_diagnosa_id" />
+			</div>
+			<fieldset>
+				<legend align="center" style="font-weight:bold;">Assesmen</legend>
+				<textarea style="margin-top:5px;" name="soap-a" id="soap-a" cols="50" rows="3"></textarea>
+			</fieldset>
+		</div>
+		<div style="float:left; padding:5px;">&nbsp;</div>
+		<div style="float:left;">
+			<fieldset>
+				<legend align="center" style="font-weight:bold;">Plan</legend>
+				<textarea name="soap-p" id="soap-p" cols="50" rows="3"></textarea>
+			</fieldset>
+		</div>
+		<div style="clear:both;">&nbsp;</div>
+		<div>
+			<li class="li-row">
+				<span class="span-right">Ket. Administrasi</span>
+				<span>:</span>
+				<span><textarea name="ket-admin" id="ket-admin" cols="60" rows="1"
+						placeholder="1 Episode, Rujuk luar, dll tulis disini"></textarea></span>
+			</li>
+			<br>
+		</div>
+		<div>
+			<li id="li-alasan-ubah" class="li-row" style="display:none;">
+				<span class="span-right">Alasan Ubah</span>
+				<span>:</span>
+				<span><textarea name="alasan-ubah" id="alasan-ubah" cols="60" rows="1"
+						style="height:20px;"></textarea></span>
+			</li>
+		</div>
+		<div align="center" style="padding-bottom:20px;">
+			<input type="hidden" name="soap_id" id="soap_id" />
+			<input type="hidden" name="subject_id" id="subject_id" />
+			<input type="hidden" name="object_id" id="object_id" />
+			<button name="btnTambahSOAP" id="btnTambahSOAP">
+				<!-- <img id="imgSOAP" src="../icon/add.gif" height="17" width="17" alt="" /> -->
+				<span style="vertical-align:top;" id="tambahSOAP">Tambah</span>
+			</button>
+			<button name="btnHapusSOAP" id="btnHapusSOAP">
+				<!--<img src="../icon/del16.gif" height="17" width="17" alt="" />-->
+				<span style="vertical-align:top;">Hapus</span>
+			</button>
+			<button name="btnBatalSOAP" id="btnBatalSOAP">
+				<!-- <img src="../icon/back.png" height="17" width="17" alt="" /> -->
+				<span style="vertical-align:top;">Batal</span>
+			</button>
+		</div>
+	</div>
+	<!-- === Tombol Floating === -->
+	<!-- status indicator shown above the floating buttons -->
+	<div id="statusIndicator" class="status-indicator">Status: Menunggu...</div>
+	<div class="floating-buttons">
+		<button id="recordBtn">🎙️ Mulai Rekam</button>
+		<button id="showTranscriptBtn" disabled style="background-color:#28a745;">📄 Lihat Transkrip</button>
+	</div>
+
+	<!-- === Modal Hasil Transkrip === -->
+	<div id="transcriptModal" class="modal-overlay">
+		<div class="modal">
+			<button id="closeModal">Tutup</button>
+			<h3>🩺 Hasil Transkrip</h3>
+			<div id="resultText">Belum ada hasil.</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/static/scripts/app.js"></script>
+</body>

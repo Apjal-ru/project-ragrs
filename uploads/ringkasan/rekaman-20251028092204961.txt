@@ -1,0 +1,21 @@
+Berikut adalah ringkasan percakapan dalam format SOAP:
+
+Keluhan utama: Keluuhannya pasien merasa data ngeri sejak tadi malam
+
+Riwayat penyakit: Hipertensi sejak 2 tahun yang lalu
+
+Sosial Budaya: Pasien tinggal di rumah bersama keluarga, sering makan makanan berlemak dan sarang laraga
+
+Tekanan Darah: 140/90
+
+Nadi: - 
+
+Suhu: - 
+
+Frekuensi Nafas: - 
+
+Berat Badan: - 
+
+Asesmen: Kemungkinan data akibat tekanan darah tinggi
+
+Plan: Isi data yang cukup, kurang inggaram, hindari stress dan rutin kontrol tekanan darah

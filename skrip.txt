@@ -1,0 +1,15 @@
+Dokter: Selamat pagi, ada keluhan apa hari ini?
+Pasien: Pagi dok, saya merasa dada saya nyeri sejak tadi malam.
+
+Dokter: Apakah sebelumnya punya riwayat penyakit tertentu?
+Pasien: Iya dok, saya punya riwayat hipertensi sejak dua tahun lalu.
+
+Dokter: Bagaimana pola hidup dan lingkungan sosialnya?
+Pasien: Saya tinggal di rumah bersama keluarga, sering makan makanan berlemak, dan jarang olahraga.
+
+Dokter: Baik. Sekarang saya periksa dulu tekanan darah dan tanda vitalnya.
+Tekanan darah 140 per 90, nadi 82, suhu tubuh 36 koma 8 derajat, frekuensi napas 20 kali per menit, berat badan 72 kilogram.
+
+Dokter: Berdasarkan pemeriksaan, kemungkinan besar ini nyeri dada akibat tekanan darah tinggi.
+Pasien: Jadi bagaimana, dok?
+Dokter: Untuk saat ini, saya sarankan istirahat cukup, kurangi garam, hindari stres, dan rutin kontrol tekanan darah. Nanti kita evaluasi kembali minggu depan.

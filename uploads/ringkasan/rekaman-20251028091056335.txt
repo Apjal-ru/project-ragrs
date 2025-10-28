@@ -1,0 +1,21 @@
+Berikut adalah ringkasan percakapan dalam format SOAP:
+
+Keluhan utama: Kurang tidur dan menolak makan.
+
+Riwayat penyakit: Diabetes mellitus, hipertensi.
+
+Sosial Budaya: Penduduk pedesaan dari daerah kota, memiliki 2 anak, bekerja sebagai petani.
+
+Tekanan Darah: 130/90
+
+Nadi: 72
+
+Suhu: 36.5
+
+Frekuensi Nafas: 20
+
+Berat Badan: 70
+
+Asesmen: Pasien memiliki gejala yang mirip dengan penyakit diabetes dan hipertensi, perlu dilakukan pengawasan lebih lanjut.
+
+Plan: Pasien diminta untuk meningkatkan aktivitas fisik, mengurangi konsumsi garam dan minuman berkalorii.

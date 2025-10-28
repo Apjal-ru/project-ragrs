@@ -1,0 +1,12 @@
+Berikut adalah ringkasan percakapan dalam format SOAP:
+
+Keluhan utama: Tekanan Darah Tinggi
+Riwayat penyakit: - 
+Sosial Budaya: - 
+Tekanan Darah: 140/90
+Nadi: 72
+Suhu: 36.5
+Frekuensi Nafas: 20
+Berat Badan: 70
+Asesmen: Tekanan darah tinggi, perlu diawasi.
+Plan: Istirahat yang cukup, kurangi garam, hindari stres, rutin kontrol tekanan darah.
