@@ -35,6 +35,7 @@ Tugasmu:
 - Format pengisian singkat dan tanpa tambahan penjelasan.
 - Jangan tambahkan penjelasan lain di luar format yang diminta.
 - Jika ada informasi yang tidak disebutkan dalam percakapan, isikan dengan "-".
+- Jika tidak ada informasi yang relevan untuk suatu bagian, isikan dengan "-".
 
 Percakapan:
 {teks}
