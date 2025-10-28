@@ -1,0 +1,7 @@
+ffmpeg
+jinja2
+pandas
+fastapi
+soundfile
+torch
+uvicorn
