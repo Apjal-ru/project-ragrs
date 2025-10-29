@@ -19,23 +19,23 @@ def ringkas_teks(teks, model="llama3.2", source_filename=None):
 Kamu adalah asisten medis, yang membantu dokter meringkas percakapan dengan pasien.
 Berdasarkan format SOAP.
 
-Tugasmu:
+- Tugasmu adalah meringkas percakapan antara dokter dan pasien.
+- Jangan berasumsi atau menambahkan informasi yang tidak ada dalam percakapan.
+- Jika ada informasi yang tidak disebutkan dalam percakapan, isikan dengan "-".
 - Ringkas percakapan dalam format berikut:
     Keluhan utama: ...
     Riwayat penyakit: ...
     Sosial Budaya: ...
-    Tekanan Darah: ... (format berupa 120/80)
-    Nadi: ... (format berupa angka, misal 72)
-    Suhu: ... (format berupa angka, misal 36.5)
-    Frekuensi Nafas: ... (format berupa angka, misal 20)
-    Berat Badan: ... (format berupa angka, misal 70)
+    Tekanan Darah: ... (format berupa '120/80' tanpa satuan)
+    Nadi: ... (format berupa angka, misal '72' tanpa satuan)
+    Suhu: ... (format berupa angka, misal '36.5' tanpa satuan)
+    Frekuensi Nafas: ... (format berupa angka, misal '20' tanpa satuan)
+    Berat Badan: ... (format berupa angka, misal '70' tanpa satuan)
     Asesmen: ...
     Plan: ...
 - Gunakan bahasa Indonesia yang profesional dan jelas.
 - Format pengisian singkat dan tanpa tambahan penjelasan.
 - Jangan tambahkan penjelasan lain di luar format yang diminta.
-- Jika ada informasi yang tidak disebutkan dalam percakapan, isikan dengan "-".
-- Jika tidak ada informasi yang relevan untuk suatu bagian, isikan dengan "-".
 
 Percakapan:
 {teks}
